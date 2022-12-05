@@ -1,11 +1,8 @@
 .typings{
 
-position: absolute;
+margin: 0 auto;
 width: 584px;
 height: 198px;
-left: 640px;
-top: 320px;
-
 font-family: 'Jost';
 font-style: normal;
 font-weight: 400;
@@ -14,6 +11,8 @@ line-height: 22px;
 text-align: center;
 letter-spacing: -0.015em;
 
+padding-top: 300px;
+padding-bottom: 470px;
 color: #000000;
 
 };
@@ -22,8 +21,7 @@ body{
 position: relative;
 width: 1440px;
 height: 1024px;
-
-background: #FFFFFF;
+background:#FFFFFF;
 };
 
 .lngpgimg{
