@@ -1,8 +1,3 @@
-<?php
- 
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Signup</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
 </head>
 <body>
-<form action="includes/signup.inc.php" method="post">
+<form action="../includes/signup.inc.php" method="post">
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -56,7 +52,7 @@
                 <input type="password" id="typePasswordX"name="pwdrepeat" placeholder="Repeat Password" class="form-control form-control-lg" />
               </div>
 
-              
+                    <p class="color">Ryan</p>
                 <br><br>
               <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Register</button>
 </form>

@@ -88,7 +88,7 @@ function createUser($conn, $name, $email, $username, $pwd){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../signup.php?error=none");
+    header("location: ../webpages/login.php?error=none");
     exit();
 }
 function emptyInputLogin($name,$email,$username,$pwd,$pwdRepeat){
@@ -108,7 +108,7 @@ function loginUser($conn, $username, $pwd){
     $uidExists = uidExists($conn, $username, $username);
 
     if($uidExists === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../webpages/login.php?error=wronglogin");
         exit();
     }
 
@@ -116,15 +116,15 @@ function loginUser($conn, $username, $pwd){
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if($checkPwd === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../webpages/login.php?error=wronglogin");
         exit();
 
     }
     else if($checkPwd === true){
         session_start();
-        $_SESSON[userid] = $uidExists["usersId"];
-        $_SESSON[useruid] = $uidExists["usersUid"];
-        header("location: ../homepage.php?error=wronglogin");
+        $_SESSION[userid] = $uidExists["usersId"];
+        $_SESSION[useruid] = $uidExists["usersUid"];
+        header("location: ../webpages/homepage.php?error=wronglogin");
         exit();
     }
 
