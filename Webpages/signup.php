@@ -52,7 +52,7 @@
                 <input type="password" id="typePasswordX"name="pwdrepeat" placeholder="Repeat Password" class="form-control form-control-lg" />
               </div>
 
-                    <p class="color">Ryan</p>
+                   
                 <br><br>
               <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Register</button>
 </form>
