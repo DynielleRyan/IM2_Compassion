@@ -81,21 +81,27 @@ function createUser($conn, $name, $email, $username, $pwd){
         header("location: ../signup.php?error=statementfailed");
         exit();
     }
-
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+
+        // $check = password_verify($pwd, $hashedPwd);
+
+        // var_dump($check);
 
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../webpages/login.php?error=none");
+    header("location: ../Webpages/login.php?error=none");
     exit();
 }
-function emptyInputLogin($name,$email,$username,$pwd,$pwdRepeat){
+
+//login functions
+
+function emptyInputLogin($username, $pwd){
     $result;
     if (empty($username) || empty($pwd)){
+        
         $result = true;
-    
     }else{
         $result = false;
     }
@@ -103,30 +109,42 @@ function emptyInputLogin($name,$email,$username,$pwd,$pwdRepeat){
 
 }
 
-function loginUser($conn, $username, $pwd){
-    $result;
+function loginUser($conn , $username, $pwd){
     $uidExists = uidExists($conn, $username, $username);
 
     if($uidExists === false){
-        header("location: ../webpages/login.php?error=wronglogin");
+        header("location ../Webpages/login.php?error=wronglogin");
         exit();
     }
-
     $pwdHashed = $uidExists["usersPwd"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if($checkPwd === false){
-        header("location: ../webpages/login.php?error=wronglogin");
+        header("location ../Webpages/login.php?error=wronglogin");
         exit();
-
     }
     else if($checkPwd === true){
-        session_start();
-        $_SESSION[userid] = $uidExists["usersId"];
-        $_SESSION[useruid] = $uidExists["usersUid"];
-        header("location: ../webpages/homepage.php?error=wronglogin");
-        exit();
+       session_start();
+       $_SESSION["userid"] =  $uidExists["usersId"];
+       $_SESSION["useruid"] =  $uidExists["usersUid"];
+       header("location ../Webpages/index.php");    
+       exit();
+      
     }
+        }
 
-}
+    //payment functions
+    function AmountMessage($conn, $amount, $message){
+        $insert = "INSERT INTO donation (payment_amount, message) VALUES('$amount','$message');";
+        mysqli_query($conn, $insert);
+        exit();
+        }
+        
+
+    
+
+
+
+
+
 

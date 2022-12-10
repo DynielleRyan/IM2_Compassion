@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
 </head>
 <body>
-<form action="../includes/signup.inc.php" method="post">
+<form action="../includes/registration.logic.php" method="post">
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -30,7 +30,7 @@
                 
               </div>
 
-      
+                
               <div class="form-outline form-white mb-4">
                 <label class="form-label" for="typePasswordX">Email</label>
                 <input type="text" id="typePasswordX" name="email" placeholder="google@gmail.com" class="form-control form-control-lg" />
@@ -54,7 +54,7 @@
 
                    
                 <br><br>
-              <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Register</button>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit" value="submit">Register</button>
 </form>
 <?php
 
