@@ -24,8 +24,8 @@
         <br><br><br>
         <ul>
         <h3>Other options</h3>
-        <li><a href="">Gcash</a></li> 
-        <li><a href="">Paymaya</a></li>
+        <li><a href="https://www.gcash.com/">Gcash</a></li> 
+        <li><a href="https://www.maya.ph/">Paymaya</a></li>
     </ul>
     </form>
             

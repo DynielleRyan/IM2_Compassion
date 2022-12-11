@@ -18,7 +18,7 @@
         
         mysqli_close($conn);
         
-       header('location: ../Webpages/payment.php');
+       header('location: ../Webpages/index.php');
     }
 
 
