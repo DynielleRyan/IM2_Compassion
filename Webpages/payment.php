@@ -16,10 +16,11 @@
         <br><br>
         <label>Personal Message</label>
         <input type="text-area" name ="message"placeholder="Message.....">
+        <!-- <input type="hidden" value=""> -->
         <br><br>
-        <button type="submit" name="submit">Donate</button>
+        <button type="submit" name="submit" value="submit">Donate</button>
     </form>
-
+            
     <ul>
         <li><a href="">Gcash</a></li>
         <li><a href="">Paymaya</a></li>

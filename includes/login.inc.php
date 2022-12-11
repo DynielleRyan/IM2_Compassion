@@ -1,7 +1,6 @@
 <?php
     session_start();
     include 'dbh.inc.php'; 
-
     // Non-NULL Initialization Vector for decryption
     $decryption_iv = '1234567891011121';
     // Store the decryption key

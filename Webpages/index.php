@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,10 +27,9 @@
                         <li class="nav-item"><a class="nav-link" href="#!">Contact Us</a></li>  
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            Logout
-                            
-                        </button>
+                    
+                        <a class="btn btn-outline-dark" href="../includes/logout.inc.php"> Logout</a> 
+
                     </form>
                 </div>
             </div>
