@@ -12,7 +12,7 @@
 
     <form  class="card"action="../includes/payment.inc.php" method="post">
         <label>Donation</label>
-        <input type="text" name="amount" placeholder="Amount of Donation" required>
+        <input type="number" name="amount" placeholder="Amount of Donation" required>
         <br><br>
         <label>Personal Message</label>
         <input type="text-area" name ="message"placeholder="Message.....">
