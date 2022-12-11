@@ -18,7 +18,8 @@
         <input type="text-area" name ="message"placeholder="Message.....">
         <!-- <input type="hidden" value=""> -->
         <br><br>
-        <button class="button"type="submit" name="submit" value="submit">Donate</button>
+        <button class="button" type="submit" name="submit" value="submit">Donate</button>
+        <br><br><br>
         <ul>
         <h3>Other options</h3>
         <li><a href="">Gcash</a></li>
