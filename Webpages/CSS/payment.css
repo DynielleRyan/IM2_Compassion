@@ -1,0 +1,89 @@
+
+
+@font-face {
+    font-family: 'Jost-Hairline';
+    src: url('./Fonts/Jost/Jost-100-Hairline.ttf');
+
+}
+    
+@font-face {
+        font-family: 'Jost-Semi';
+        src: url('./Fonts/Jost/Jost-600-Semi.otf');
+}
+
+@font-face {
+        font-family: 'Jost-Bold' ;
+        src: url('./Fonts/Jost/Jost-700-Bold.otf');
+}
+
+
+
+
+.button{
+    margin: 0 auto;
+    background-color: transparent;
+    height: 50px;
+    width: 75px;
+    border-radius: 10px;
+    border-color: azure;
+    color: azure;
+}
+
+.button:hover{
+    margin: 0 auto;
+    background-color:#999c99;
+    height: 50px;
+    width: 75px;
+    border-radius: 10px;
+    border: none;
+    color: azure;
+}
+
+
+input{
+    width: 500px ;
+    height: 20px;
+}
+
+
+
+body{
+    position: center;
+    margin: 10%;
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+label{
+    font-family: Jost-Semi;
+    color: #ffff;
+}
+
+
+.card{
+    position:center;
+    height: 450px;
+    width: 400px;
+    justify-content: center;    
+    border-radius: 20px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    background-color: #343a40;
+ 
+}
+
+h3{
+
+        font-family: Jost-Semi;
+        color: #ffff;
+    
+}
+
+a{
+
+        font-family: Jost-Semi;
+        color: #999c99;
+    
+}
