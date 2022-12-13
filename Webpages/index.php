@@ -7,11 +7,10 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Compassion</title>
-        <!-- Favicon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/aboutus.css">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./css/index.css" rel="stylesheet">
     </head>
     <body>
@@ -22,9 +21,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="About-Contact.php">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact Us</a></li>  
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#About">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>  
                     </ul>
                     <form class="d-flex">
                     
@@ -173,23 +172,52 @@ Animals depend on us for a lot of things, and one of those things is to protect 
         </section>
 
         <section id="About" class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Compassion</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Give and you will receive</p>
-                </div>
-    </div>
+                        <div class="container px-4 px-lg-5 my-5">
+                            <div class="text-center text-white">
+                                <h1 class="display-4 fw-bolder">About us </h1>
+                                <p class="lead fw-normal text-white-50 mb-0">Meet the Minds Behind Compasssion</p>
+                                <br>
+
+                              <div class="parent">
+                                <div class="card">
+                                    <img class = "aboutpic"src="./IMG/ryan.jpg" alt="John" style="width:100%">
+                                    <h1 class="Name">Dynielle Ryan <br> Goc-ong</h1>
+                                    <p class="title">CEO & Founder</p>
+                                    <p>Harvard University</p>
+                                <div style="margin: 24px 0;">
+                                    <a href="#"><i style="color:black;"class="fa fa-dribbble"></i></a> 
+                                    <a href="#"><i style="color:black;"class="fa fa-twitter"></i></a>  
+                                    <a href="#"><i style="color:black;"class="fa fa-linkedin"></i></a>  
+                                    <a href="#"><i style="color:black;"class="fa fa-facebook"></i></a> 
+                                </div>
+                                 <p><button>Contact</button></p>
+                                </div>
+
+                                <div class="card">
+                                    <img class = "aboutpic"src="./IMG/curtney.jpg" alt="John" style="width:100%">
+                                    <h1 class="Name">Curtney Sealtiel Mata Juma-ang</h1>
+                                    <p class="title">CEO & Founder</p>
+                                    <p>Harvard University</p>
+                                <div style="margin: 24px 0;">
+                                    <a href="#"><i style="color:black;"class="fa fa-dribbble"></i></a> 
+                                    <a href="#"><i style="color:black;"class="fa fa-twitter"></i></a>  
+                                    <a href="#"><i style="color:black;"class="fa fa-linkedin"></i></a>  
+                                    <a href="#"><i style="color:black;"class="fa fa-facebook"></i></a> 
+                                </div>
+                                 <p><button>Contact</button></p>
+                                </div>
+                              </div>
+
+                            </div>
+                         </div>
 
 
     </section>
 
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Compassion 2022</p></div>
+        <footer class="py-5 bg-light">
+            <div class="container"><p class="m-0 text-center text-dark">Compassion 2022</p></div>
         </footer>
-
-
-
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
