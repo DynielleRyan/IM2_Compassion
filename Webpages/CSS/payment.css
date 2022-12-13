@@ -21,7 +21,7 @@
 
 .button{
     position: absolute;
-    top: 240px;
+    top: 230px;
     left: 210px;
     margin: -25px 0 0 -25px;
     background-color: transparent;
@@ -39,6 +39,20 @@
     border-radius: 10px;
     border: none;
     color: azure;
+}
+
+.btn{
+background-color: transparent;
+border: none;
+color: #999c99 ;
+}
+
+.btn:hover{
+
+border: none;
+background-color: transparent;
+color: #ffff;
+
 }
 
 
@@ -71,12 +85,12 @@ label{
 
 .card{
     position:relative;
-    height: 350px;
+    height: 360px;
     width: 400px;
     justify-content: center;    
     border-radius: 20px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 25px;
     padding-left: 50px;
     background-color: #343a40;
 
