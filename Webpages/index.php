@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About-Contact.php">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact Us</a></li>  
                     </ul>
                     <form class="d-flex">
@@ -171,10 +171,25 @@ Animals depend on us for a lot of things, and one of those things is to protect 
                 </div>
             </div>
         </section>
+
+        <section id="About" class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Compassion</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Give and you will receive</p>
+                </div>
+    </div>
+
+
+    </section>
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Compassion 2022</p></div>
         </footer>
+
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
