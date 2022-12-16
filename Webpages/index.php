@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-   $welcomeMessage = " <p style='padding: 10px 10px 0px 5px'>Welcome to Compassion," . $_SESSION['currUser']['usersName']  . "! </p>" ;
+   $welcomeMessage = " <p style='padding: 10px 10px 0px 5px'>Welcome to Compassion, " . $_SESSION['currUser']['usersName']  . "! </p>" ;
 
 } else {
     header('Location: login.php');
