@@ -43,7 +43,9 @@
                     $_SESSION['currUser'] = $row;
                     if (isset($_SESSION['login_err'])) {
                         unset($_SESSION['login_err']);
-                    }
+                    } 
+                    
+                    $_SESSION['loggedin'] = true;
                     header("location: ../Webpages/index.php"); 
                     mysqli_close($conn);
                 }else{
@@ -51,6 +53,7 @@
                 }            
             } else {
                 $_SESSION['login_err']['email_err'] = "Email isn't registered";
+                header('location: ../Webpages/Login.php');
             }
         }
     }

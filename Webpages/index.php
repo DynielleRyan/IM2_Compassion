@@ -1,12 +1,54 @@
 
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   $welcomeMessage = " <p style='padding: 10px 10px 0px 5px'>Welcome to Compassion," . $_SESSION['currUser']['usersName']  . "! </p>" ;
+
+} else {
+    header('Location: login.php');
+}
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+
+@font-face {
+    font-family: 'Jost-Hairline';
+    src: url('./Fonts/Jost/Jost-100-Hairline.ttf');
+
+}
+    
+@font-face {
+        font-family: 'Jost-Semi';
+        src: url('./Fonts/Jost/Jost-600-Semi.otf');
+}
+
+@font-face {
+        font-family: 'Jost-Black' ;
+        src: url('./Fonts/Jost/Jost-900-Black.otf');
+}
+
+    .Header{
+        font-family:'Jost-Semi';
+    }
+
+    .text{
+        font-family:'Jost-Black';
+    }
+
+
+
+
+        </style>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Compassion</title>
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/aboutus.css">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -15,19 +57,21 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light Header">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.php">Compassion</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#About">About Us</a></li>
+
                     </ul>
                     <form class="d-flex">
-                    
+                        <?php echo  $welcomeMessage; ?>
                         <a class="btn btn-outline-dark" href="../includes/logout.inc.php"> Logout</a> 
-
+                        
                     </form>
                 </div>
             </div>
@@ -36,8 +80,8 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Compassion</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Give and you will receive</p>
+                    <h1 class="display-4 fw-bolder Header">Compassion</h1>
+                    <p class="lead fw-normal text-white-50 mb-0 text" >Give and you will receive</p>
                 </div>
             </div>
         </header>
@@ -173,8 +217,8 @@ Animals depend on us for a lot of things, and one of those things is to protect 
         <section id="About" class="bg-dark py-5">
                         <div class="container px-4 px-lg-5 my-5">
                             <div class="text-center text-white">
-                                <h1 class="display-4 fw-bolder">About us </h1>
-                                <p class="lead fw-normal text-white-50 mb-0">Meet the Minds Behind Compasssion</p>
+                                <h1 class="display-4 fw-bolder Header">About Us </h1>
+                                <p class="lead fw-normal text-white-50 mb-0 text">Meet the Minds Behind Compasssion</p>
                                 <br>
 
                               <div class="parent">
@@ -184,12 +228,11 @@ Animals depend on us for a lot of things, and one of those things is to protect 
                                     <p class="title">CEO & Founder</p>
                                     <p>Harvard University</p>
                                 <div style="margin: 24px 0;">
-                                    <a href="#"><i style="color:black;"class="fa fa-dribbble"></i></a> 
-                                    <a href="#"><i style="color:black;"class="fa fa-twitter"></i></a>  
-                                    <a href="#"><i style="color:black;"class="fa fa-linkedin"></i></a>  
-                                    <a href="#"><i style="color:black;"class="fa fa-facebook"></i></a> 
+                                    <a target="_blank"href="https://dribbble.com/"><i style="color:black;"class="fa fa-dribbble"></i></a> 
+                                    <a target="_blank"href="https://twitter.com/home"><i style="color:black;"class="fa fa-twitter"></i></a>  
+                                    <a target="_blank"href="https://www.linkedin.com/"><i style="color:black;"class="fa fa-linkedin"></i></a>  
+                                    <a target="_blank"href="https://www.facebook.com/dynielleryan.gocong.9"><i style="color:black;"class="fa fa-facebook"></i></a> 
                                 </div>
-                                 <p><button>Contact</button></p>
                                 </div>
 
                                 <div class="card">
@@ -198,12 +241,11 @@ Animals depend on us for a lot of things, and one of those things is to protect 
                                     <p class="title">CEO & Founder</p>
                                     <p>Harvard University</p>
                                 <div style="margin: 24px 0;">
-                                    <a href="#"><i style="color:black;"class="fa fa-dribbble"></i></a> 
-                                    <a href="#"><i style="color:black;"class="fa fa-twitter"></i></a>  
-                                    <a href="#"><i style="color:black;"class="fa fa-linkedin"></i></a>  
-                                    <a href="#"><i style="color:black;"class="fa fa-facebook"></i></a> 
+                                    <a target="_blank" href="https://dribbble.com/"><i style="color:black;"class="fa fa-dribbble"></i></a> 
+                                    <a target="_blank" href="https://twitter.com/home"><i style="color:black;"class="fa fa-twitter"></i></a>  
+                                    <a target="_blank" href="https://www.linkedin.com/"><i style="color:black;"class="fa fa-linkedin"></i></a>  
+                                    <a target="_blank" href="https://www.facebook.com/Maximum.Intelligence1000000000/"><i style="color:black;"class="fa fa-facebook"></i></a> 
                                 </div>
-                                 <p><button>Contact</button></p>
                                 </div>
                               </div>
 

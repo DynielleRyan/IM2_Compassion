@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Signup</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
@@ -26,30 +26,30 @@
 
               <div class="form-outline form-white mb-4">
               <label class="form-label" for="typeEmailX" >Full Name</label>
-                <input type="text" id="typeEmailX" name="name" class="form-control form-control-lg" placeholder="Samuel Adams"/>
+                <input required type="text" id="typeEmailX" name="name" class="form-control form-control-lg" placeholder="Samuel Adams"/>
                 
               </div>
 
                 
               <div class="form-outline form-white mb-4">
                 <label class="form-label" for="typePasswordX">Email</label>
-                <input type="text" id="typePasswordX" name="email" placeholder="google@gmail.com" class="form-control form-control-lg" />
+                <input required type="email" id="typePasswordX" name="email" placeholder="Email" class="form-control form-control-lg" />
                 
               </div>
 
               <div class="form-outline form-white mb-4">
               <label class="form-label" for="typePasswordX">Username</label>
-                <input type="text" id="typePasswordX" name="uid" placeholder="kice28" class="form-control form-control-lg" />
+                <input required type="text" id="typePasswordX" name="uid" placeholder="Username" class="form-control form-control-lg" />
                 
               </div>
 
               <div class="form-outline form-white mb-4">
               <label class="form-label" for="typePasswordX" >Password</label>
-                <input type="password" id="typePasswordX"name="pwd" placeholder="Password" class="form-control form-control-lg" />
+                <input required type="password" id="typePasswordX"name="pwd" placeholder="Password" class="form-control form-control-lg" />
               </div>
                 <div class="form-outline form-white mb-4">
               <label class="form-label" for="typePasswordX" >Confirm Password</label>
-                <input type="password" id="typePasswordX"name="pwdrepeat" placeholder="Repeat Password" class="form-control form-control-lg" />
+                <input required type="password" id="typePasswordX"name="pwdrepeat" placeholder="Repeat Password" class="form-control form-control-lg" />
               </div>
 
                    
