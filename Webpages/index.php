@@ -89,26 +89,43 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- foundation image-->
-                            <img class="card-img-top" src="./IMG/foundation_1.jpg" alt="..." />
-                           
-                            <div class="card-body p-4">
-                                <div class="text-center">
+                    <?php
+                    include '../includes/dbh.inc.php'; 
+                    $query = "SELECT * FROM `foundations`";
+
+                    $results = mysqli_query($conn, $query);
+                    $rows = mysqli_num_rows($results);
+
+                    if($rows) {
+                        while ($row = mysqli_fetch_assoc($results)) {
+                            echo '<div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- foundation image-->
+                                        <img class="card-img-top" src="./IMG/'.$row['image'].'" alt="..." />
                                     
-                                    <h5 class="fw-bolder">The African Child Foundation</h5>
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                
+                                                <h5 class="fw-bolder">'.$row['foundation_name'].'</h5>
+                                                
+                                                '.$row['description'].'
+                                            </div>
+                                        </div>
                                     
-                                    The African Child Foundation is a non-profit organization whose mission is to support Fr. Henry Simaro in his efforts to transform the lives of orphaned and vulnerable children in the slums outside Nairobi, Kenya.
-                                </div>
-                            </div>
-                           
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="payment.php">Donate</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="payment.php?id='.$row['foundationId'].'&donation='.$row['foundation_name'].'">Donate</a></div>
+                                        </div>
+                                    </div>
+                                </div>';
+                        }
+                    } else {
+                        echo '<div class="col mb-5">
+                                No foundation found.
+                            </div>';
+                    }
+                    ?>
+                    
+                    <!-- <div class="col mb-5">
                         <div class="card h-100">
                             
                             <img class="card-img-top" src="./IMG/foundation_2.jpg" alt="..." />
@@ -209,7 +226,7 @@ Animals depend on us for a lot of things, and one of those things is to protect 
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="payment.php">Donate</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>

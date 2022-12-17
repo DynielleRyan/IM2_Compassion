@@ -15,20 +15,26 @@
 
     <form  class="card"action="../includes/payment.inc.php" method="post">
     <a class="btn"href="index.php"><i class="fa fa-home"></i></a>
-    <br>
-        <label>Donation</label> 
-        <br>
-        <input type="number" name="amount" placeholder="Amount of Donation" required>
-        <br><br>
-        <label>Personal Message</label>
-        <br>
-        <input class ="message" type="text-area" name ="message"placeholder="Message.....">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button class="button" type="submit" name="submit" value="submit">Donate</button>
-        <ul>
-        <h3>Other options</h3>
-        <li><a href="https://www.gcash.com/">Gcash</a></li> 
-        <li><a href="https://www.maya.ph/">Paymaya</a></li>
+    <?php
+
+        echo '<br>
+            <label>'.$_GET['donation'].'</label>
+            <label>Donation</label> 
+            <br>
+            <input type="number" name="amount" placeholder="Amount of Donation" required>
+            <br><br>
+            <label>Personal Message</label>
+            <br>
+            <input class ="message" type="text-area" name ="message"placeholder="Message.....">
+            <input type="hidden" name="dontaion_id" value="'.$_GET['id'].'">
+            <button class="button" type="submit" name="submit" value="submit">Donate</button>
+            <ul>
+            <h3>Other options</h3>
+            <li><a href="https://www.gcash.com/">Gcash</a></li> 
+            <li><a href="https://www.maya.ph/">Paymaya</a></li>';
+    
+    ?>
+        
     </ul>
     </form>
             
