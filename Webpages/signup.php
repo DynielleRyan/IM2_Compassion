@@ -52,7 +52,8 @@
                 <input required type="password" id="typePasswordX"name="pwdrepeat" placeholder="Repeat Password" class="form-control form-control-lg" />
               </div>
 
-                   
+              <p>Already have an account? <a href ="../webpages/login.php">Click me!</a></p>     
+
                 <br><br>
               <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit" value="submit">Register</button>
 </form>
